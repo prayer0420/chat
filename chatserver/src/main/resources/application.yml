@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #보안 적용 X
+    url: jdbc:mysql://localhost:3307/chatdb?useSSL=false
+    username : root
+    password: 1234
+  jpa:
+    database: mysql
+    #InnoDB, 트랜잭션 지원
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  # chatserversercretaccesstokenchatserversercretaccesstokenchatserversercretaccesstoken
+  secretKey: Y2hhdHNlcnZlcnNlcmNyZXRhY2Nlc3N0b2tlbmNoYXRzZXJ2ZXJzZXJjcmV0YWNjZXNzdG9rZW5jaGF0c2VydmVyc2VyY3JldGFjY2Vzc3Rva2Vu
+  expiration: 3000 #3000분
